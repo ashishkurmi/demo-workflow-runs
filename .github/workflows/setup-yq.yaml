@@ -1,14 +1,13 @@
-# in your job:
+---
 name: setup yq demo
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
 jobs:
   yq-example:
     name: YQ example!
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - uses: chrisdickinson/setup-yq@latest
-    - name: Show folks how to run YQ:
-      run: yq --help
+      - uses: actions/checkout@v1
+      - uses: chrisdickinson/setup-yq@latest
+      - name: Show folks how to run YQ
+        run: yq --help
